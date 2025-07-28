@@ -55,7 +55,7 @@ Follow these steps to get your local development environment up and running.
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/AlmerKastaraZain/Rust-starter-pack/main
 cd <your-project-directory>
 ```
 
@@ -83,18 +83,28 @@ Now, open `.env` and fill in the values for your local setup. The default values
 
 **Example `.env`:**
 ```env
+# .env 
+
 # General Settings
+ENV="development"
+DATABASE_URL="postgres://axum_postgres:axumpostgres@127.0.0.1:5432/axum_postgres"
+DATABASE_URL="postgres://axum_postgres:axumpostgres@127.0.0.1:5432/axum_postgres"
 SERVER_ADDRESS="127.0.0.1:7878"
-DATABASE_URL="postgres://postgres:yourpassword@localhost/yourdbname"
 
 # Security Settings
-FRONTEND_ORIGIN="http://localhost:5173"
-JWT_SECRET="a-very-long-and-secure-random-string-for-jwt"
-JWT_EXPIRATION_HOURS=24
+# CSRF Settings
+CSRF_SECRET="mLirohHZGqUS+Qk1aYTCAIPZ/Q5YpRqOYRLFn9n0RiKhhL5ZcMuaMgyjEMF/s84Pf4Nkh+pfXT+CwrrULp9Olw=="
 
-# Rate Limiting
-RATE_LIMIT_REQUESTS=30
-RATE_LIMIT_PERIOD_SECONDS=60
+# CORS Settings (Set to your localhost or url)
+FRONTEND_ORIGIN="http://localhost:5173"
+
+# JSON Web Token Settings
+JWT_SECRET="gs/wrACujNwM+C5u9up+vYhEUsnruf6OFU+eWk4oT9RrFQdpPTg+KLaYBHeMxbIYPdtDL3CpI/eOJtt3cx3v+A=="
+JWT_EXPIRATION_HOURS=1
+
+# Rate Limiting (DDOS Protections)
+RATE_LIMIT_REQUESTS=2
+RATE_LIMIT_PERIOD_SECONDS=5
 ```
 
 ### 4. Run Database Migrations
