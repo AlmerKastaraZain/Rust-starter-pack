@@ -155,6 +155,7 @@ cargo watch -x run
 │   ├── errors/         # Centralized error handling
 │   ├── middleware/     # Custom Axum middleware (e.g., auth)
 │   ├── models/         # Data structures (e.g., User)
+│   ├── utils/          # Utilities 
 │   ├── path/           # Axum router definitions
 │   ├── service/        # Business logic
 │   └── main.rs         # Application entry point
