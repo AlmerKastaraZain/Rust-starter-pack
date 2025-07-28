@@ -28,6 +28,7 @@ This starter pack comes with a comprehensive set of features pre-configured:
 *   **Security Hardening:**
     *   **Rate Limiting:** Protects against DoS attacks using [**Tower Governor**](https://github.com/benwis/tower-governor).
     *   **CORS:** Cross-Origin Resource Sharing middleware configured for frontend integration.
+    *   **CSRF:** Cross-site request forgery
     *   **Security Headers:** Essential HTTP security headers (HSTS, X-Frame-Options, etc.) included to protect against common web vulnerabilities.
 *   **Error Handling:** A centralized `AppError` type for consistent error responses.
 *   **Logging:** Structured logging provided by the `tracing` ecosystem.
